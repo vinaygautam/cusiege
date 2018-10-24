@@ -1,0 +1,12 @@
+<?php
+session_start();
+if(!isset($_SESSION['username']))
+	header('location:index');
+elseif($_SERVER['REQUEST_METHOD']=="POST")
+{
+	$i=$_SESSION['i'];
+	$_SESSION['gans'][$i]=$_POST[$i];
+	$_SESSION['save']=1;
+	header('location:play');
+}
+?>
