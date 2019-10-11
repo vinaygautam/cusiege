@@ -25,4 +25,15 @@ header("location:Assets/php/redirect")
             <input type="Password" placeholder="Password" id="textbox" name="password"><br><br><input type="submit" id="button" value="Login"><br><br>Need an account? <a href='signup'>Sign Up</a> </center>
         </form></div></div>
 </body>
+  <div id="wrapperlog" class='divlog'><div class='divlog'><form method="post" action="Assets/php/login" >
+               <center><img src="CCSLOGO.png" class="img">
+               <?php if(isset($_SESSION["register"]))
+               echo "<br><br> You've been sucessfully registered please LogIn to continue.";
+               else if(isset($_SESSION["pass"]))
+               echo "<br><br> Wrong Credentials.";
+               ?>
+                <h1><b>LOGIN</b></h1><input type="Textbox" placeholder="Username" id="textbox" name="username"><br><br>
+            <input type="Password" placeholder="Password" id="textbox" name="password"><br><br><input type="submit" id="button" value="Login"><br><br>Need an account? <a href='signup'>Sign Up</a> </center>
+        </form></div></div>
+</body>
 </html>
